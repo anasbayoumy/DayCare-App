@@ -33,11 +33,3 @@ class AuthEventUpdateUser extends AuthEvent {
 class AuthEventDeleteUser extends AuthEvent {}
 
 class AuthEventLogout extends AuthEvent {}
-
-class AuthLoading extends AuthEvent {}
-
-class AuthError extends AuthEvent {
-  final String message;
-
-  AuthError({required this.message});
-}

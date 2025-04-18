@@ -1,4 +1,5 @@
-import 'package:daycarefirst/features/auth/presentation/widgets/auth_textfield.dart';
+import 'package:daycarefirst/features/auth/presentation/widgets/auth_button.dart';
+import 'package:daycarefirst/features/auth/presentation/widgets/auth_textfield_norm.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,6 +7,9 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
+    final isPasswordVisible = false;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
@@ -26,28 +30,40 @@ class LoginPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            AuthTextfield(
-              hintText: 'Email',
-              icon: Icons.email,
+            CustomtextfieldNorm(
+              hint: 'Email',
+              prefixIcon: const Icon(Icons.email),
+              myController: emailController,
+              valid: (value) => null,
+              isNumber: false,
+              isEmail: true,
               isPassword: false,
-              controller: TextEditingController(),
             ),
             const SizedBox(height: 16),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-              ),
-              obscureText: true,
-            ),
+            CustomtextfieldNorm(
+                hint: 'Password',
+                prefixIcon: const Icon(Icons.key_outlined),
+                myController: passwordController,
+                valid: (value) => null,
+                isNumber: false,
+                isEmail: false,
+                isPassword: true,
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    // isPasswordVisible.value = !isPasswordVisible.value;
+                  },
+                  icon: Icon(Icons.visibility),
+                  //   isPasswordVisible.value
+                  //       ? Icons.visibility
+                  //       : Icons.visibility_off,
+                  // ),
+                )),
             const SizedBox(height: 20),
-            ElevatedButton(
+            CustomButtonAuth(
               onPressed: () {
                 // Handle login logic here
               },
-              child: const Text('Login'),
+              childText: 'Login',
             ),
             const SizedBox(height: 10),
             TextButton(

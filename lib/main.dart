@@ -1,4 +1,5 @@
 import 'package:daycarefirst/features/auth/presentation/pages/Login_page.dart';
+import 'package:daycarefirst/features/auth/presentation/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Flutter Demo', home: LoginPage());
+    return const MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        home: SignupPage());
   }
 }
