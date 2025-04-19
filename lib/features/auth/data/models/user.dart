@@ -1,7 +1,7 @@
 import 'package:daycarefirst/features/auth/domain/entities/UserEntity.dart';
 
-class User extends UserEntity {
-  User({
+class UserModel extends UserEntity {
+  UserModel({
     required super.email,
     required super.password,
     required super.name,
@@ -9,8 +9,8 @@ class User extends UserEntity {
     required super.address,
     required super.photoUrl,
   });
-  factory User.fromJson(Map<String, dynamic> json) {
-    return User(
+  factory UserModel.fromJson(Map<String, dynamic> json) {
+    return UserModel(
       email: json['email'],
       password: json['password'],
       name: json['name'],
@@ -28,5 +28,18 @@ class User extends UserEntity {
       'address': address,
       'photoUrl': photoUrl,
     };
+  }
+
+  Future<UserModel> copyWith({required String id}) {
+    return Future.value(
+      UserModel(
+        email: email,
+        password: password,
+        name: name,
+        phoneNumber: phoneNumber,
+        address: address,
+        photoUrl: photoUrl,
+      ),
+    );
   }
 }

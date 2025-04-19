@@ -9,7 +9,6 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final emailController = TextEditingController();
     final passwordController = TextEditingController();
-    final isPasswordVisible = false;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),

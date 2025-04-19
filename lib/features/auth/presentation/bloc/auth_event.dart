@@ -10,11 +10,22 @@ class AuthEventSignIn extends AuthEvent {
   AuthEventSignIn({required this.email, required this.password});
 }
 
-class AuthEventSignUp extends AuthEvent {
+final class AuthEventSignUp extends AuthEvent {
   final String email;
   final String password;
+  final String name;
+  final String phoneNumber;
+  final String address;
+  final String? photoUrl;
 
-  AuthEventSignUp({required this.email, required this.password});
+  AuthEventSignUp({
+    this.photoUrl,
+    required this.email,
+    required this.password,
+    required this.name,
+    required this.phoneNumber,
+    required this.address,
+  });
 }
 
 class AuthEventSignOut extends AuthEvent {}

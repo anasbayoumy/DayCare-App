@@ -1,26 +1,44 @@
-import 'package:daycarefirst/features/auth/presentation/pages/Login_page.dart';
+import 'package:daycarefirst/features/auth/data/datasource/auth_remote_data_source.dart';
+import 'package:daycarefirst/features/auth/data/repo/auth_repo_imp.dart';
+import 'package:daycarefirst/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:daycarefirst/features/auth/presentation/pages/signup_page.dart';
 import 'package:daycarefirst/firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Initialize Firebase here if needed
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+
+  // Initialize dependencies
+  final authRemoteDataSource = AuthRemoteDataSourceImpl(
+    firebaseAuth: FirebaseAuth.instance,
+  );
+  final authRepo = AuthRepoImp(
+    remoteDataSource: authRemoteDataSource,
+  );
+
+  runApp(MyApp(authRepo: authRepo));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AuthRepoImp authRepo;
+
+  const MyApp({super.key, required this.authRepo});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        home: SignupPage());
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      home: BlocProvider(
+        create: (context) => AuthBloc(signupUseCase: authRepo.signUp),   ),
+        child: const SignupPage(),
+      ),
+      );      
   }
 }

@@ -1,7 +1,9 @@
+import 'package:daycarefirst/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:daycarefirst/features/auth/presentation/pages/Login_page.dart';
 import 'package:daycarefirst/features/auth/presentation/widgets/auth_button.dart';
 import 'package:daycarefirst/features/auth/presentation/widgets/auth_textfield_norm.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -11,7 +13,10 @@ class SignupPage extends StatelessWidget {
     final nameController = TextEditingController();
     final emailController = TextEditingController();
     final passwordController = TextEditingController();
-    final isPasswordVisible = false;
+    final phoneNumberController = TextEditingController();
+    final addressController = TextEditingController();
+    // final photoUrlController = TextEditingController();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Signup'),
@@ -59,25 +64,55 @@ class SignupPage extends StatelessWidget {
                   icon: Icon(Icons.visibility),
                 ),
               ),
+              // const SizedBox(height: 20),
+              // CustomtextfieldNorm(
+              //   hint: 'Confirm Password',
+              //   prefixIcon: const Icon(Icons.key_outlined),
+              //   myController: passwordController,
+              //   valid: (value) => null,
+              //   isNumber: false,
+              //   isEmail: false,
+              //   isPassword: true,
+              //   suffixIcon: IconButton(
+              //     onPressed: () {
+              //       // isPasswordVisible.value = !isPasswordVisible.value;
+              //     },
+              //     icon: Icon(Icons.visibility),
+              //   ),
+              // ),
+
               const SizedBox(height: 20),
               CustomtextfieldNorm(
-                hint: 'Confirm Password',
-                prefixIcon: const Icon(Icons.key_outlined),
-                myController: passwordController,
+                hint: 'Phone Number',
+                prefixIcon: const Icon(Icons.phone),
+                myController: phoneNumberController,
+                valid: (value) => null,
+                isNumber: true,
+                isEmail: false,
+                isPassword: false,
+              ),
+              const SizedBox(height: 20),
+              CustomtextfieldNorm(
+                hint: 'Address',
+                prefixIcon: const Icon(Icons.home),
+                myController: addressController,
                 valid: (value) => null,
                 isNumber: false,
                 isEmail: false,
-                isPassword: true,
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    // isPasswordVisible.value = !isPasswordVisible.value;
-                  },
-                  icon: Icon(Icons.visibility),
-                ),
+                isPassword: false,
               ),
               const SizedBox(height: 20),
               CustomButtonAuth(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<AuthBloc>().add(AuthEventSignUp(
+                        // Replace 'someRequiredArgument' with the actual value
+                        email: emailController.text,
+                        password: passwordController.text,
+                        name: nameController.text,
+                        phoneNumber: phoneNumberController.text,
+                        address: addressController.text,
+                      ));
+                },
                 childText: 'Signup',
               ),
               const SizedBox(height: 20),
