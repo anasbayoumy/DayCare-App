@@ -1,5 +1,6 @@
 import 'package:daycarefirst/features/auth/data/datasource/auth_remote_data_source.dart';
 import 'package:daycarefirst/features/auth/data/repo/auth_repo_imp.dart';
+import 'package:daycarefirst/features/auth/domain/usecases/signup_usecase.dart';
 import 'package:daycarefirst/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:daycarefirst/features/auth/presentation/pages/signup_page.dart';
 import 'package:daycarefirst/firebase_options.dart';
@@ -36,9 +37,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
-        create: (context) => AuthBloc(signupUseCase: authRepo.signUp),   ),
+        create: (context) => AuthBloc(
+          signupUseCase: SignupUseCase(
+              authRepo: AuthRepoImp(
+                  remoteDataSource: AuthRemoteDataSourceImpl(
+                      firebaseAuth: FirebaseAuth.instance))),
+        ),
         child: const SignupPage(),
       ),
-      );      
+    );
   }
 }

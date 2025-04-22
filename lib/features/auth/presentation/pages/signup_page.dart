@@ -61,7 +61,7 @@ class SignupPage extends StatelessWidget {
                   onPressed: () {
                     // isPasswordVisible.value = !isPasswordVisible.value;
                   },
-                  icon: Icon(Icons.visibility),
+                  icon: const Icon(Icons.visibility),
                 ),
               ),
               // const SizedBox(height: 20),
@@ -118,8 +118,10 @@ class SignupPage extends StatelessWidget {
               const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()));
                 },
                 child: const Text('Already have an account? Login'),
               ),
