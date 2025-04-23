@@ -51,7 +51,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     // isPasswordVisible.value = !isPasswordVisible.value;
                   },
-                  icon: Icon(Icons.visibility),
+                  icon: const Icon(Icons.visibility),
                   //   isPasswordVisible.value
                   //       ? Icons.visibility
                   //       : Icons.visibility_off,
