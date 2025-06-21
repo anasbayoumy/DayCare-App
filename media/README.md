@@ -5,21 +5,28 @@ This directory contains all design assets, screenshots, and media files for the 
 ## Directory Structure
 
 ### 📱 Screenshots (`screenshots/`)
-App screenshots for documentation, app store listings, and promotional materials.
+App design assets and UI screenshots organized in numbered sequence.
 
-**Naming Convention:**
-- `home_screen.png` - Main home screen
-- `map_discovery.png` - Map-based daycare discovery
-- `booking_flow_[step].png` - Booking process screens
-- `parent_dashboard.png` - Parent dashboard overview
-- `chat_interface.png` - Real-time chat interface
-- `owner_portal.png` - Owner/staff management portal
+**Current Assets (SVG Format):**
+- `1.svg` - Welcome & Onboarding Screen
+- `2.svg` - User Authentication & Login
+- `3.svg` - Home Dashboard Overview
+- `4.svg` - Map-Based Daycare Discovery
+- `5.svg` - Daycare Details & Information
+- `6.svg` - Booking & Reservation Flow
+- `7.svg` - Parent Dashboard & Activity Timeline
+- `8.svg` - Real-time Chat Interface
+- `9.svg` - Owner/Staff Management Portal
+- `10.svg` - Analytics & Reports
+- `11svg.svg` - Settings & Profile Management
+- `12.svg` - Notifications & Alerts
+- `1.1.svg` - Alternative onboarding design
 
 **Requirements:**
-- Format: PNG or JPG
-- Resolution: 1080x1920 (mobile) or higher
+- Format: SVG (vector), PNG, or JPG
+- Maintain numbered sequence for core user flows
 - File size: < 2MB per image
-- Include both light and dark mode variants where applicable
+- Include descriptive naming for new assets
 
 ### 🎨 Designs (`designs/`)
 
@@ -47,7 +54,10 @@ Design system documentation and assets.
 ### 🏷️ Logos (`logos/`)
 App branding and logo assets.
 
-**Required Files:**
+**Current Assets:**
+- `Framed DayCare.png` - Main app logo with frame design
+
+**Additional Files Needed:**
 - `app_icon.png` - Main app icon (512x512)
 - `logo_light.png` - Logo for light backgrounds
 - `logo_dark.png` - Logo for dark backgrounds
