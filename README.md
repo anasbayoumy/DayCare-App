@@ -65,8 +65,8 @@ Daycare revolutionizes childcare management by providing a seamless platform for
 #### Complete Design Flow (1-12)
 The following SVG files showcase the complete user journey and app interface:
 
-| Screen | Design Asset | Description |
-|--------|--------------|-------------|
+| Screen | Design Asset |
+|--------|--------------|
 | 1 | ![Screen 1](assets/media/1.svg) | 
 | 2 | ![Screen 2](assets/media/11.svg)|
 | 3 | ![Screen 3](assets/media/2.svg)|
@@ -84,7 +84,7 @@ The following SVG files showcase the complete user journey and app interface:
 
 
 
-```
+``` ```
 
 
 ## 🏗️ Architecture
