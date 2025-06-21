@@ -60,8 +60,6 @@ Daycare revolutionizes childcare management by providing a seamless platform for
 
 ### 📱 App Design Showcase
 
-Our app design assets are organized in the `assets/media/` directory, featuring comprehensive UI/UX designs:
-
 ![App Logo](assets/media/Framed%20DayCare.png)
 
 #### Complete Design Flow (1-12)
@@ -69,72 +67,25 @@ The following SVG files showcase the complete user journey and app interface:
 
 | Screen | Design Asset | Description |
 |--------|--------------|-------------|
-| 1 | ![Screen 1](assets/media/1.svg) | Welcome & Onboarding Screen |
-| 2 | ![Screen 2](assets/media/2.svg) | User Authentication & Login |
-| 3 | ![Screen 3](assets/media/3.svg) | Home Dashboard Overview |
-| 4 | ![Screen 4](assets/media/4.svg) | Map-Based Daycare Discovery |
-| 5 | ![Screen 5](assets/media/5.svg) | Daycare Details & Information |
-| 6 | ![Screen 6](assets/media/6.svg) | Booking & Reservation Flow |
-| 7 | ![Screen 7](assets/media/7.svg) | Parent Dashboard & Activity Timeline |
-| 8 | ![Screen 8](assets/media/8.svg) | Real-time Chat Interface |
-| 9 | ![Screen 9](assets/media/9.svg) | Owner/Staff Management Portal |
-| 10 | ![Screen 10](assets/media/10.svg) | Analytics & Reports |
-| 11 | ![Screen 11](assets/media/11svg.svg) | Settings & Profile Management |
-| 12 | ![Screen 12](assets/media/12.svg) | Notifications & Alerts |
+| 1 | ![Screen 1](assets/media/1.svg) | 
+| 2 | ![Screen 2](assets/media/11.svg)|
+| 3 | ![Screen 3](assets/media/2.svg)|
+| 4 | ![Screen 3](assets/media/3.svg)| 
+| 5 | ![Screen 4](assets/media/4.svg)| 
+| 6 | ![Screen 5](assets/media/5.svg)| 
+| 7 | ![Screen 6](assets/media/6.svg)| 
+| 8 | ![Screen 7](assets/media/7.svg)| 
+| 9 | ![Screen 8](assets/media/8.svg)| 
+| 10 | ![Screen 9](assets/media/9.svg)| 
+| 11 | ![Screen 10](assets/media/10.svg)| 
+| 12 | ![Screen 11](assets/media/11svg.svg) |
+| 13 | ![Screen 12](assets/media/12.svg)| 
 
-#### Additional Design Assets
-- **[Alternative Onboarding](assets/media/1.1.svg)** - Enhanced onboarding experience
 
-### 📁 Complete Asset Organization
+
 
 ```
-assets/                    # Original design assets
-└── media/
-    ├── 1.svg - 12.svg     # Complete app design flow (numbered sequence)
-    ├── 1.1.svg            # Alternative/enhanced designs
-    └── Framed DayCare.png # App logo and branding
 
-media/                     # Organized media structure
-├── README.md              # Media guidelines and documentation
-├── screenshots/           # App UI designs (copied from assets)
-│   ├── 1.svg - 12.svg    # Numbered design sequence
-│   └── 1.1.svg           # Alternative designs
-├── designs/
-│   ├── ui_mockups/       # High-fidelity design mockups
-│   ├── wireframes/       # Low-fidelity layout designs
-│   └── style_guide/      # Design system documentation
-├── logos/                # App branding assets
-│   └── Framed DayCare.png # Main app logo
-└── videos/               # Demo videos and promotional content
-```
-
-### 🔄 Asset Workflow
-
-1. **Original Assets**: Stored in `assets/media/` for app bundle inclusion
-2. **Documentation Assets**: Copied to `media/` for README and documentation
-3. **Numbered Sequence**: SVG files 1-12 represent the complete user journey
-4. **Version Control**: Alternative designs use decimal notation (e.g., 1.1.svg)
-
-### 🎯 Design Highlights
-
-Our design system features:
-- **Intuitive User Flow**: Logical progression from onboarding to core features
-- **Consistent Visual Language**: Unified design patterns across all screens
-- **Modern UI Components**: Contemporary interface elements and interactions
-- **Accessibility Focus**: Clear visual hierarchy and inclusive design principles
-- **Responsive Design**: Optimized layouts for various device sizes
-
-### 📋 Using Design Assets
-
-#### For Development
-- Reference numbered SVGs (1-12) for implementation guidance
-- Follow the established design patterns and component styles
-- Maintain visual consistency across the application
-
-#### For Documentation
-- Link to specific design assets when documenting features
-- Use the complete flow for user journey documentation
-- Reference designs in technical specifications and requirements
 
 ## 🏗️ Architecture
 
